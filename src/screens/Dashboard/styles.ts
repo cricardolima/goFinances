@@ -14,6 +14,8 @@ export const Header = styled.View`
   background-color: ${({ theme }) => theme.colors.primary};
 
   justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
 `;
 
 export const UserWrapper = styled.View`
@@ -23,7 +25,6 @@ export const UserWrapper = styled.View`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
 `;
 
 export const UserInfo = styled.View`
