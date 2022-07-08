@@ -2,6 +2,7 @@ import { HighlightCard } from "../../components/HighlightCard";
 import {
   Container,
   Header,
+  Icon,
   Photo,
   User,
   UserGreetings,
@@ -27,6 +28,7 @@ export const Dashboard = () => {
               <UserName>Ricardo</UserName>
             </User>
           </UserInfo>
+          <Icon name="power" />
         </UserWrapper>
       </Header>
       <HighlightCards>
