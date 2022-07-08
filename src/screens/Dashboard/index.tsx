@@ -1,3 +1,4 @@
+import { HighlightCard } from "../../components/HighlightCard";
 import {
   Container,
   Header,
@@ -7,6 +8,7 @@ import {
   UserInfo,
   UserName,
   UserWrapper,
+  HighlightCards,
 } from "./styles";
 
 export const Dashboard = () => {
@@ -27,6 +29,11 @@ export const Dashboard = () => {
           </UserInfo>
         </UserWrapper>
       </Header>
+      <HighlightCards>
+        <HighlightCard />
+        <HighlightCard />
+        <HighlightCard />
+      </HighlightCards>
     </Container>
   );
 };
