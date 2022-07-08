@@ -11,6 +11,7 @@ import {
 import theme from "./src/global/styles/theme";
 
 import { Dashboard } from "./src/screens/Dashboard";
+import { StatusBar } from "react-native";
 
 export default function App() {
   SplashScreen.preventAutoHideAsync();
@@ -28,6 +29,11 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
+      <StatusBar
+        backgroundColor="transparent"
+        translucent
+        barStyle="light-content"
+      />
       <Dashboard />
     </ThemeProvider>
   );
