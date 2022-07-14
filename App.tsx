@@ -11,8 +11,10 @@ import {
 
 import theme from "./src/global/styles/theme";
 
+import { NavigationContainer } from "@react-navigation/native";
+
 import { StatusBar } from "react-native";
-import { Register } from "./src/screens/Register";
+import { Routes } from "./src/routes/app.routes";
 
 export default function App() {
   SplashScreen.preventAutoHideAsync();
@@ -30,12 +32,14 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <StatusBar
-        backgroundColor="transparent"
-        translucent
-        barStyle="light-content"
-      />
-      <Register />
+      <NavigationContainer>
+        <StatusBar
+          backgroundColor="transparent"
+          translucent
+          barStyle="light-content"
+        />
+        <Routes />
+      </NavigationContainer>
     </ThemeProvider>
   );
 }

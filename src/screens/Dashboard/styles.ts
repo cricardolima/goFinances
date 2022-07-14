@@ -95,4 +95,3 @@ export const TransactionList = styled(
     paddingBottom: getBottomSpace(),
   },
 })``;
-e
