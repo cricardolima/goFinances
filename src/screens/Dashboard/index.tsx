@@ -1,4 +1,4 @@
-import { getBottomSpace } from "react-native-iphone-x-helper";
+import React from "react";
 import { HighlightCard } from "../../components/HighlightCard";
 import {
   TransactionCard,
