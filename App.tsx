@@ -11,8 +11,8 @@ import {
 
 import theme from "./src/global/styles/theme";
 
-import { Register } from "./src/screens/Register";
 import { StatusBar } from "react-native";
+import { Register } from "./src/screens/Register";
 
 export default function App() {
   SplashScreen.preventAutoHideAsync();
