@@ -18,6 +18,7 @@ import {
   Transactions,
   TransactionList,
   Title,
+  LogoutButton,
 } from "./styles";
 
 export interface DataListProps extends TransactionCardProps {
@@ -67,7 +68,9 @@ export const Dashboard = () => {
               <UserName>Ricardo</UserName>
             </User>
           </UserInfo>
-          <Icon name="power" />
+          <LogoutButton>
+            <Icon name="power" />
+          </LogoutButton>
         </UserWrapper>
       </Header>
       <HighlightCards>

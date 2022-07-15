@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Alert, Keyboard, Modal, TouchableWithoutFeedback } from "react-native";
+import { Alert, Keyboard, Modal } from "react-native";
+import { TouchableWithoutFeedback } from "react-native-gesture-handler";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
@@ -40,7 +41,11 @@ export const Register = () => {
     name: "Categoria",
   });
 
-  const { control, handleSubmit, formState: { errors } } = useForm<FormData>({ resolver: yupResolver(schema) });
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormData>({ resolver: yupResolver(schema) });
 
   const handleTransactionTypeSelect = (type: "up" | "down") => {
     setTransactionType(type);
@@ -69,7 +74,11 @@ export const Register = () => {
   };
 
   return (
-    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+    <TouchableWithoutFeedback
+      onPress={Keyboard.dismiss}
+      containerStyle={{ flex: 1 }}
+      style={{ flex: 1 }}
+    >
       <Container>
         <Header>
           <Title>Cadastro</Title>
