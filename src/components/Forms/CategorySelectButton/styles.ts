@@ -1,11 +1,15 @@
 import styled from "styled-components/native";
 import { Feather } from "@expo/vector-icons";
 import { RFValue } from "react-native-responsive-fontsize";
-import { RectButton } from "react-native-gesture-handler";
+import { RectButton, RectButtonProps } from "react-native-gesture-handler";
+import { PropsWithChildren } from "react";
+
+interface ButtonProps extends PropsWithChildren<RectButtonProps> {}
+
 
 export const Container = styled(RectButton).attrs({
     activeOpacity: 0.7
-})`
+})<ButtonProps>`
     background-color: ${({ theme }) => theme.colors.shape};
     flex-direction: row;
     justify-content: space-between;
