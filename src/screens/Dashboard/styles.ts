@@ -4,8 +4,12 @@ import { FlatList, FlatListProps } from "react-native";
 import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
 import Constants from "expo-constants";
 import { getBottomSpace } from "react-native-iphone-x-helper";
+import { BorderlessButton, RectButtonProps } from "react-native-gesture-handler";
+import { PropsWithChildren } from "react";
 
 import { DataListProps } from ".";
+
+interface ButtonProps extends PropsWithChildren<RectButtonProps> {}
 
 export const Container = styled.View`
   flex: 1;
@@ -63,6 +67,8 @@ export const Icon = styled(Feather as any)`
   font-size: ${RFValue(24)}px;
 `;
 
+export const LogoutButton = styled(BorderlessButton)<ButtonProps>``;
+
 export const HighlightCards = styled.ScrollView.attrs({
   horizontal: true,
   showsHorizontalScrollIndicator: false,
@@ -95,3 +101,9 @@ export const TransactionList = styled(
     paddingBottom: getBottomSpace(),
   },
 })``;
+
+export const LoadContainer = styled.View`
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+`;

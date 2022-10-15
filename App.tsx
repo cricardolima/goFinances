@@ -1,4 +1,7 @@
 import React from "react";
+import "intl";
+import "intl/locale-data/jsonp/pt-BR";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { ThemeProvider } from "styled-components";
 import * as SplashScreen from "expo-splash-screen";
 
@@ -11,8 +14,10 @@ import {
 
 import theme from "./src/global/styles/theme";
 
+import { NavigationContainer } from "@react-navigation/native";
+
 import { StatusBar } from "react-native";
-import { Register } from "./src/screens/Register";
+import { Routes } from "./src/routes/app.routes";
 
 export default function App() {
   SplashScreen.preventAutoHideAsync();
@@ -29,13 +34,17 @@ export default function App() {
   SplashScreen.hideAsync();
 
   return (
-    <ThemeProvider theme={theme}>
-      <StatusBar
-        backgroundColor="transparent"
-        translucent
-        barStyle="light-content"
-      />
-      <Register />
-    </ThemeProvider>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <ThemeProvider theme={theme}>
+        <NavigationContainer>
+          <StatusBar
+            backgroundColor="transparent"
+            translucent
+            barStyle="light-content"
+          />
+          <Routes />
+        </NavigationContainer>
+      </ThemeProvider>
+    </GestureHandlerRootView>
   );
 }

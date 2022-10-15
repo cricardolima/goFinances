@@ -1,5 +1,4 @@
 import React from "react";
-import { Title } from "../../TransactionCard/styles";
 import { Container, Category, Icon } from "./styles";
 
 interface Props {
