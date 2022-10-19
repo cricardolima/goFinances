@@ -47,7 +47,7 @@ export const Dashboard = () => {
     const [highlightData, setHighlightData] = useState<HighlightData>(
         {} as HighlightData
     );
-    const dataKey = "@goFinances:transaction";
+    const dataKey = `@gofinances:transactions_user:${user.id}`;
 
     const getLastDate = (
         collection: DataListProps[],
@@ -138,7 +138,7 @@ export const Dashboard = () => {
                     style: "currency",
                     currency: "BRL",
                 }),
-                lastTransaction: totalDate,
+                lastTransaction: total != 0 ? totalDate : 'Não houve movimentações',
             },
         });
 
